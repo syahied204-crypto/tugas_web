@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- ===============================================
+     Portofolio Mahasiswa Teknik Informatika
+     Nama   : Syahied
+     NBI    : 1462200054
+     Berkas : index.html  (struktur dokumen)
+     =============================================== -->
+<html lang="id">
+<head>
+  <!-- Encoding UTF-8 agar huruf Indonesia benar -->
+  <meta charset="UTF-8">
+
+  <!-- Viewport: acuan lebar perangkat (mobile) -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <!-- Deskripsi singkat untuk mesin pencari -->
+  <meta name="description"
+        content="Portofolio Syahied, mahasiswa
+                 Teknik Informatika UNTAG Surabaya.">
+
+  <title>Syahied - Portofolio Teknik Informatika</title>
+
+  <!-- CSS eksternal: tampilan dipisah dari HTML -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVIGASI ================= -->
+  <!-- nav menampung tautan anchor (#) antar bagian -->
+  <nav class="topbar" aria-label="Navigasi utama">
+    <span class="topbar__brand">Syahied</span>
+    <ul class="topbar__menu">
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#kompetensi">Kompetensi</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#organisasi">Organisasi</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= IDENTITAS ================= -->
+  <header class="identitas" id="atas">
+    <p class="identitas__nim">NBI 1462200054</p>
+
+    <!-- h1 dipakai sekali: judul utama dokumen -->
+    <h1 class="identitas__nama">Syahied</h1>
+
+    <p class="identitas__peran">
+      Mahasiswa Teknik Informatika, Universitas 17
+      Agustus 1945 Surabaya. Fokus pada pengembangan
+      web dan penerapan machine learning.
+    </p>
+
+    <!-- rel="noopener" wajib untuk target _blank -->
+    <p class="identitas__aksi">
+      <a class="tombol tombol--utama"
+         href="https://github.com/syahied"
+         target="_blank" rel="noopener">
+         Repositori GitHub</a>
+      <a class="tombol" href="#kontak">Hubungi saya</a>
+    </p>
+  </header>
+
+  <main>
+    <!-- ================= PROFIL ================= -->
+    <section class="baris" id="profil">
+      <h2 class="baris__judul">Profil</h2>
+      <div class="baris__isi">
+        <p>
+          Saya mempelajari rekayasa perangkat lunak
+          dengan penekanan pada sisi web: merancang
+          antarmuka yang mudah dibaca, menyusun
+          struktur data yang rapi, dan mendokumentasikan
+          setiap perubahan lewat Git.
+        </p>
+        <p>
+          Di luar perkuliahan saya mengerjakan proyek
+          pengolahan citra dan pembelajaran mesin,
+          terutama pada tahap penyiapan data dan
+          evaluasi model.
+        </p>
+
+        <!-- dl: pasangan istilah dan nilai -->
+        <dl class="fakta">
+          <dt>Program studi</dt>
+          <dd>S1 Teknik Informatika</dd>
+          <dt>Kampus</dt>
+          <dd>UNTAG Surabaya</dd>
+          <dt>Domisili</dt>
+          <dd>Surabaya, Jawa Timur</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============== KOMPETENSI ============== -->
+    <section class="baris" id="kompetensi">
+      <h2 class="baris__judul">Kompetensi teknis</h2>
+      <div class="baris__isi">
+
+        <div class="grup">
+          <h3>Antarmuka web</h3>
+          <ul class="tag">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Laravel Blade</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+
+        <div class="grup">
+          <h3>Sisi server dan basis data</h3>
+          <ul class="tag">
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>MySQL</li>
+            <li>REST API</li>
+          </ul>
+        </div>
+
+        <div class="grup">
+          <h3>Data dan pemodelan</h3>
+          <ul class="tag">
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>OpenCV</li>
+            <li>TensorFlow</li>
+          </ul>
+        </div>
+
+        <div class="grup">
+          <h3>Alat kerja</h3>
+          <ul class="tag">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROYEK ================= -->
+    <section class="baris" id="proyek">
+      <h2 class="baris__judul">Proyek</h2>
+      <div class="baris__isi">
+
+        <!-- article: tiap proyek satu unit konten -->
+        <article class="proyek">
+          <p class="proyek__tahun">2026</p>
+          <h3 class="proyek__nama">
+            Klasifikasi citra untuk proyek akhir PCD
+          </h3>
+          <p>
+            Pipeline pengolahan citra digital:
+            prapemrosesan, ekstraksi fitur, dan
+            klasifikasi. Dikerjakan berkelompok dengan
+            pembagian branch per anggota.
+          </p>
+          <p class="proyek__tumpukan">
+            Python &middot; OpenCV &middot; TensorFlow
+          </p>
+        </article>
+
+        <article class="proyek">
+          <p class="proyek__tahun">2025</p>
+          <h3 class="proyek__nama">
+            Antarmuka sistem informasi internal
+          </h3>
+          <p>
+            Pengembangan tampilan aplikasi internal
+            perusahaan pada masa kerja praktik:
+            penyusunan komponen Blade, tabel data, dan
+            formulir yang responsif.
+          </p>
+          <p class="proyek__tumpukan">
+            Laravel Blade &middot; Bootstrap &middot;
+            MySQL
+          </p>
+        </article>
+
+        <article class="proyek">
+          <p class="proyek__tahun">2025</p>
+          <h3 class="proyek__nama">
+            Program kriptografi klasik
+          </h3>
+          <p>
+            Implementasi cipher permutasi, ekspansi,
+            dan pemampatan beserta proses dekripsinya,
+            lengkap dengan pengujian per teknik.
+          </p>
+          <p class="proyek__tumpukan">
+            Python &middot; Pengujian manual
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============== ORGANISASI ============== -->
+    <section class="baris" id="organisasi">
+      <h2 class="baris__judul">Organisasi</h2>
+      <div class="baris__isi">
+
+        <article class="proyek">
+          <p class="proyek__tahun">2024-2025</p>
+          <h3 class="proyek__nama">
+            Divisi Teknologi, Himpunan Mahasiswa
+            Teknik Informatika
+          </h3>
+          <p>
+            Mengelola publikasi kegiatan dan menyiapkan
+            materi pelatihan Git untuk anggota baru.
+          </p>
+        </article>
+
+        <article class="proyek">
+          <p class="proyek__tahun">2024</p>
+          <h3 class="proyek__nama">
+            Panitia seminar teknologi kampus
+          </h3>
+          <p>
+            Menangani pendaftaran peserta berbasis web
+            dan rekapitulasi data kehadiran.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section class="baris" id="kontak">
+      <h2 class="baris__judul">Kontak</h2>
+      <div class="baris__isi">
+        <ul class="kontak">
+          <li>
+            <span>Surel</span>
+            <a href=
+            "mailto:syahied@student.untag-sby.ac.id">
+              syahied@student.untag-sby.ac.id</a>
+          </li>
+          <li>
+            <span>GitHub</span>
+            <a href="https://github.com/syahied"
+               target="_blank" rel="noopener">
+              github.com/syahied</a>
+          </li>
+          <li>
+            <span>LinkedIn</span>
+            <a href=
+               "https://www.linkedin.com/in/syahied"
+               target="_blank" rel="noopener">
+              linkedin.com/in/syahied</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="kaki">
+    <p>
+      Portofolio statis &middot; dipublikasikan melalui
+      GitHub Pages.
+    </p>
+    <p><a href="#atas">Kembali ke atas</a></p>
+  </footer>
+
+</body>
+</html>

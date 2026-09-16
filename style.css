@@ -1,0 +1,302 @@
+/* ===============================================
+   style.css - tampilan portofolio Syahied (1462200054)
+   Urutan penulisan: token warna, penyetelan dasar,
+   navigasi, kerangka layout, komponen, media query.
+   =============================================== */
+
+/* ----- 1. Token warna dan ukuran ----------------- */
+/* Custom properties agar tema cukup diubah di satu
+   tempat dan dipanggil dengan fungsi var().          */
+:root {
+  --kertas:      #eef1ee;   /* latar halaman         */
+  --tinta:       #14181a;   /* teks utama            */
+  --redup:       #5c6a6e;   /* teks sekunder         */
+  --aksen:       #0f5c5a;   /* tautan dan tindakan   */
+  --aksen-tipis: #d7e3e1;   /* chip dan garis batas  */
+  --sorot:       #c9922f;   /* penanda, dipakai hemat*/
+  --lebar:       960px;     /* lebar maksimum konten */
+}
+
+/* ----- 2. Penyetelan dasar ----------------------- */
+* {
+  box-sizing: border-box;   /* padding ikut lebar     */
+}
+
+body {
+  margin: 0;
+  background: var(--kertas);
+  color: var(--tinta);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Judul serif, teks isi sans-serif (kontras) */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+a {
+  color: var(--aksen);
+}
+
+/* Garis fokus agar navigasi keyboard tetap terlihat */
+a:focus {
+  outline: 2px solid var(--sorot);
+  outline-offset: 2px;
+}
+
+/* ----- 3. Navigasi ------------------------------- */
+.topbar {
+  padding: 14px 24px;
+  background: var(--kertas);
+  border-bottom: 1px solid var(--aksen-tipis);
+}
+
+.topbar__brand {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  letter-spacing: .02em;
+}
+
+.topbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.topbar__menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.topbar__menu a {
+  color: var(--redup);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.topbar__menu a:hover {
+  color: var(--aksen);
+  border-bottom: 2px solid var(--sorot);
+}
+
+/* Membersihkan float agar tinggi bar tetap benar */
+.topbar:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ----- 4. Header identitas ----------------------- */
+.identitas {
+  max-width: var(--lebar);
+  margin: 0 auto;
+  padding: 72px 24px 56px 24px;
+  border-bottom: 1px solid var(--aksen-tipis);
+}
+
+.identitas__nim {
+  margin: 0;
+  color: var(--redup);
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+
+.identitas__nama {
+  margin: 6px 0 12px 0;
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+.identitas__peran {
+  margin: 0;
+  max-width: 34em;       /* batas panjang baris baca */
+  color: var(--redup);
+  font-size: 18px;
+}
+
+.identitas__aksi {
+  margin-top: 28px;
+}
+
+.tombol {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 9px 18px;
+  border: 1px solid var(--aksen);
+  border-radius: 2px;
+  color: var(--aksen);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Tombol utama diberi latar penuh sebagai hierarki */
+.tombol--utama {
+  background: var(--aksen);
+  color: #fff;
+}
+
+/* ----- 5. Kerangka baris dua kolom --------------- */
+/* Judul bagian di kiri, isi di kanan (flexbox).      */
+.baris {
+  display: -webkit-box;   /* prefiks peramban lama    */
+  display: -webkit-flex;
+  display: flex;
+  max-width: var(--lebar);
+  margin: 0 auto;
+  padding: 44px 24px;
+  border-bottom: 1px solid var(--aksen-tipis);
+}
+
+.baris__judul {
+  width: 200px;
+  min-width: 200px;
+  margin: 0;
+  color: var(--aksen);
+  font-size: 20px;
+}
+
+.baris__isi {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;                /* mengisi sisa ruang       */
+}
+
+.baris__isi p {
+  margin: 0 0 14px 0;
+  max-width: 40em;
+}
+
+/* ----- 6. Daftar fakta profil -------------------- */
+.fakta {
+  margin: 22px 0 0 0;
+}
+
+.fakta dt {
+  float: left;
+  clear: left;
+  width: 140px;
+  color: var(--redup);
+  font-size: 14px;
+}
+
+.fakta dd {
+  margin: 0 0 6px 150px;  /* sejajar dengan dt        */
+  font-size: 14px;
+}
+
+/* ----- 7. Chip kompetensi ------------------------ */
+.grup {
+  margin-bottom: 20px;
+}
+
+.grup h3 {
+  margin: 0 0 8px 0;
+  color: var(--redup);
+  font-size: 15px;
+}
+
+.tag {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag li {
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  padding: 4px 11px;
+  background: var(--aksen-tipis);
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+/* ----- 8. Kartu proyek dan organisasi ------------ */
+.proyek {
+  margin-bottom: 26px;
+  padding-left: 16px;
+  border-left: 2px solid var(--aksen-tipis);
+}
+
+/* Interaksi sederhana saat kursor berada di kartu */
+.proyek:hover {
+  border-left-color: var(--sorot);
+}
+
+.proyek__tahun {
+  margin: 0;
+  color: var(--redup);
+  font-size: 13px;
+}
+
+.proyek__nama {
+  margin: 2px 0 8px 0;
+  font-size: 19px;
+}
+
+.proyek__tumpukan {
+  color: var(--redup);
+  font-size: 13px;
+}
+
+/* ----- 9. Kontak --------------------------------- */
+.kontak {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kontak li {
+  margin-bottom: 8px;
+}
+
+.kontak span {
+  display: inline-block;
+  width: 90px;            /* label kiri sejajar       */
+  color: var(--redup);
+  font-size: 14px;
+}
+
+/* ----- 10. Footer -------------------------------- */
+.kaki {
+  max-width: var(--lebar);
+  margin: 0 auto;
+  padding: 28px 24px 56px 24px;
+  color: var(--redup);
+  font-size: 13px;
+}
+
+.kaki p {
+  margin: 0 0 4px 0;
+}
+
+/* ----- 11. Responsif di bawah 720 piksel --------- */
+@media (max-width: 720px) {
+  .baris {
+    display: block;       /* judul turun ke atas isi  */
+  }
+  .baris__judul {
+    width: auto;
+    margin-bottom: 12px;
+  }
+  .identitas__nama {
+    font-size: 38px;
+  }
+  .topbar__menu {
+    float: none;
+    margin-top: 10px;
+  }
+  .topbar__menu li {
+    margin: 0 16px 0 0;
+  }
+}
+
+/* ----- 12. Menghormati gerak minimal ------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
