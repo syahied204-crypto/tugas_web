@@ -5,25 +5,14 @@ Universitas 17 Agustus 1945 Surabaya. Dibangun dengan
 HTML5 dan CSS3 tanpa kerangka kerja tambahan agar ringan
 dan mudah dipublikasikan sebagai halaman statis.
 
-Halaman langsung: https://syahied.github.io/portofolio
+Halaman langsung: https://syahied204-crypto.github.io/tugas_web/
 
-## Isi halaman
-
-| Bagian     | Keterangan                           |
-|------------|--------------------------------------|
-| Identitas  | Nama, NBI, prodi, dan tautan utama   |
-| Profil     | Ringkasan diri dan data akademik     |
-| Kompetensi | Kemampuan teknis per bidang          |
-| Proyek     | Tiga proyek dan tumpukan teknologi   |
-| Organisasi | Pengalaman kepanitiaan dan organisasi|
-| Kontak     | Surel, GitHub, dan LinkedIn          |
 
 ## Struktur berkas
 
     portofolio/
     |-- index.html          # struktur halaman
-    |-- css/
-    |   `-- style.css       # warna, layout, media query
+    |-- style.css           # warna, layout, media query
     |-- img/                # aset gambar
     `-- README.md           # dokumentasi repositori
 
@@ -34,13 +23,6 @@ Halaman langsung: https://syahied.github.io/portofolio
 - CSS3: custom properties, flexbox, media query,
   prefers-reduced-motion
 - Tanpa dependensi eksternal dan tanpa proses build
-
-## Menjalankan secara lokal
-
-    git clone https://github.com/syahied/portofolio.git
-    cd portofolio
-    python -m http.server 8000
-    # buka http://localhost:8000 pada peramban
 
 ## Alur kontribusi
 
