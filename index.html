@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!-- ===============================================
      Portofolio Mahasiswa Teknik Informatika
-     Nama   : Syahied
+     Nama   : Ash Syahied Shiddiq
      NBI    : 1462200054
      Berkas : index.html  (struktur dokumen)
+     Versi  : SESUDAH PERBAIKAN AKSESIBILITAS (WCAG 2.2)
      =============================================== -->
 <html lang="id">
 <head>
@@ -16,20 +17,27 @@
 
   <!-- Deskripsi singkat untuk mesin pencari -->
   <meta name="description"
-        content="Portofolio Syahied, mahasiswa
+        content="Portofolio Ash Syahied Shiddiq, mahasiswa
                  Teknik Informatika UNTAG Surabaya.">
 
-  <title>Syahied - Portofolio Teknik Informatika</title>
+  <title>Ash Syahied Shiddiq - Portofolio Teknik Informatika</title>
 
   <!-- CSS eksternal: tampilan dipisah dari HTML -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ======= PERBAIKAN 1: Skip to Content ======= -->
+  <!-- Memudahkan pengguna keyboard melewati navigasi
+       dan langsung menuju konten utama (WCAG 2.4.1) -->
+  <a href="#konten-utama" class="skip-link">
+    Lewati ke konten utama
+  </a>
+
   <!-- ================= NAVIGASI ================= -->
   <!-- nav menampung tautan anchor (#) antar bagian -->
   <nav class="topbar" aria-label="Navigasi utama">
-    <span class="topbar__brand">Syahied</span>
+    <span class="topbar__brand">Ash Syahied Shiddiq</span>
     <ul class="topbar__menu">
       <li><a href="#profil">Profil</a></li>
       <li><a href="#kompetensi">Kompetensi</a></li>
@@ -44,7 +52,7 @@
     <p class="identitas__nim">NBI 1462200054</p>
 
     <!-- h1 dipakai sekali: judul utama dokumen -->
-    <h1 class="identitas__nama">Syahied</h1>
+    <h1 class="identitas__nama">Ash Syahied Shiddiq</h1>
 
     <p class="identitas__peran">
       Mahasiswa Teknik Informatika, Universitas 17
@@ -53,16 +61,23 @@
     </p>
 
     <!-- rel="noopener" wajib untuk target _blank -->
+    <!-- PERBAIKAN 2: menandai tautan yang membuka
+         tab baru agar diketahui pengguna pembaca
+         layar (terkait WCAG 3.2.5) -->
     <p class="identitas__aksi">
       <a class="tombol tombol--utama"
-         href="https://github.com/syahied"
+         href="https://github.com/ashsyahiedshiddiq"
          target="_blank" rel="noopener">
-         Repositori GitHub</a>
+         Repositori GitHub
+         <span class="sr-only">(membuka tab baru)</span></a>
       <a class="tombol" href="#kontak">Hubungi saya</a>
     </p>
   </header>
 
-  <main>
+  <!-- ======= PERBAIKAN 3: Identitas konten utama =======
+       id dan tabindex="-1" sebagai target skip-link,
+       sesuai praktik "Skip to Content" -->
+  <main id="konten-utama" tabindex="-1">
     <!-- ================= PROFIL ================= -->
     <section class="baris" id="profil">
       <h2 class="baris__judul">Profil</h2>
@@ -234,25 +249,30 @@
     <section class="baris" id="kontak">
       <h2 class="baris__judul">Kontak</h2>
       <div class="baris__isi">
+        <!-- PERBAIKAN 2 (lanjutan): penanda tab baru
+             juga ditambahkan pada tautan eksternal
+             di bagian kontak -->
         <ul class="kontak">
           <li>
             <span>Surel</span>
             <a href=
-            "mailto:syahied@student.untag-sby.ac.id">
-              syahied@student.untag-sby.ac.id</a>
+            "mailto:ashsyahiedshiddiq@student.untag-sby.ac.id">
+              ashsyahiedshiddiq@student.untag-sby.ac.id</a>
           </li>
           <li>
             <span>GitHub</span>
-            <a href="https://github.com/syahied"
+            <a href="https://github.com/ashsyahiedshiddiq"
                target="_blank" rel="noopener">
-              github.com/syahied</a>
+              github.com/ashsyahiedshiddiq
+              <span class="sr-only">(membuka tab baru)</span></a>
           </li>
           <li>
             <span>LinkedIn</span>
             <a href=
-               "https://www.linkedin.com/in/syahied"
+               "https://www.linkedin.com/in/ashsyahiedshiddiq"
                target="_blank" rel="noopener">
-              linkedin.com/in/syahied</a>
+              linkedin.com/in/ashsyahiedshiddiq
+              <span class="sr-only">(membuka tab baru)</span></a>
           </li>
         </ul>
       </div>
